@@ -1,1 +1,87 @@
+/* Diseño general */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #fef7fa;
+    margin: 0;
+    padding: 0;
+    color: #333;
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 {
+    text-align: center;
+    color: #e91e63;
+    font-size: 36px;
+}
+
+.semestre {
+    margin-bottom: 40px;
+}
+
+h2 {
+    color: #ff80ab;
+    font-size: 28px;
+    margin-bottom: 10px;
+}
+
+ul {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.ramo {
+    background-color: #f8bbd0;
+    border: 2px solid #ff80ab;
+    border-radius: 8px;
+    padding: 10px 20px;
+    width: 180px;
+    text-align: center;
+    cursor: pointer;
+    transition: background-color 0.3s ease, text-decoration 0.3s ease;
+}
+
+/* Estados de los ramos */
+.ramo.aprobado {
+    background-color: #e57373;
+    color: white;
+    text-decoration: line-through;
+}
+
+/* Bloqueo por requisitos */
+.ramo.bloqueado {
+    background-color: #ffb3d9;
+    cursor: not-allowed;
+}
+
+.ramo.bloqueado:hover {
+    background-color: #ff80ab;
+}
+
+.ramo:hover {
+    background-color: #ff80ab;
+}
+
+/* Mensajes */
+.alerta {
+    color: #f44336;
+    text-align: center;
+    margin-top: 20px;
+    font-size: 18px;
+}
+
+/* Diseño responsivo */
+@media (max-width: 768px) {
+    ul {
+        flex-direction: column;
+        align-items: center;
+    }
+}
 
